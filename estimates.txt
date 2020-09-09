@@ -1,0 +1,6 @@
+Recover Time Objective (RTO) is the maximum time your platform or service can be unavailable.
+Minimum RTO for a single AZ outage: 1 minute
+Minimum RTO for a single region outage: 1 hr
+The RPO is a measure of how much data is lost during an incident. 
+Minimum RPO for a single AZ outage: 1 minute
+Minimum RPO for a single region outage: 2 minutes

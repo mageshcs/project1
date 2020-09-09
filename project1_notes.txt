@@ -1,0 +1,34 @@
+primary private subnet:
+subnet-0a33ece0796a0d79b
+subnet-035f2ce74b2f498bb
+
+secondary private subnet:
+subnet-09dd89239cc65f40c
+subnet-03c12cc22e95871b3
+
+https://github.com/udacity/nd063-c2-design-for-availability-resilience-reliability-replacement-project-starter-template
+Primary:
+ec2-user@ec2-3-15-0-189.us-east-2.compute.amazonaws.com
+primary-db.cfrd3qngwxob.us-east-2.rds.amazonaws.com
+mysql -h primary-db.cfrd3qngwxob.us-east-2.rds.amazonaws.com -u admin -p
+pwd: SeaSpray215
+https://www.youtube.com/watch?v=bi7ow5NGC-U
+https://www.youtube.com/watch?v=I9Fzm1obG7U
+sudo yum update
+sudo yum install mysql
+show databases;
+USE udacity;
+create table customer (name VARCHAR(50), email VARCHAR(100), sex CHAR(1));
+INSERT INTO customer values('Magesh', 'mageshcs@gmail.com', 'M');
+INSERT INTO customer values('Selvaraj', 'selvaraj@gmail.com', 'M');
+select * from customer;
+
+Secondary:
+ec2-user@ec2-3-84-185-17.compute-1.amazonaws.com
+mysql -h secondary-db.cev69cxt76jt.us-east-1.rds.amazonaws.com -u admin -p
+sudo yum update
+sudo yum install mysql
+show databases;
+USE udacity;
+select * from customer;
+INSERT INTO customer values('John', 'john@gmail.com', 'M');
